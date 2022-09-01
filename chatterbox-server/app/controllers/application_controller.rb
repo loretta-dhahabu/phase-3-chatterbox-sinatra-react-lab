@@ -7,6 +7,11 @@ get '/messages' do
     created_at.to_json
   end  
 
+  # get '/messages/:id' do
+  #   updated_message = Message.find(params[:id])
+  #   updated_message.to_json
+  # end
+
   post '/messages' do
     new_message = Message.create(body: params[:body], username: params[:username])
     new_message.to_json
